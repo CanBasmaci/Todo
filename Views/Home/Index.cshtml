@@ -6,7 +6,7 @@
             <thead>
                 <tr class="table-primary">
                     <th scope="col">Id</th>
-                    <th scope="col">Name</th>
+                    <th scope="col">Isim</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -14,11 +14,11 @@
                 @foreach (var t in Model.TodoList)
                 {
                     <tr>
-                        <th class="todos-column" scope="row">@t.Id</th>
-                        <td class="todos-column">@t.Name</td>
+                        <th class="todos-column" scope="row">@t.id</th>
+                        <td class="todos-column">@t.Title</td>
                         <td class="buttons-column">
-                            <input type="submit" class="btn btn-danger" value="Delete" onClick="deleteTodo(@t.Id)" />
-                            <input type="submit" class="btn btn-primary" value="Update" onClick="populateForm(@t.Id)" />
+                            <input type="submit" class="btn btn-danger" value="Sil" onClick="deleteTodo(@t.id)" />
+                            <input type="submit" class="btn btn-primary" value="Güncelle" onClick="populateForm(@t.id)" />
                         </td>
 
                     </tr>
